@@ -1,0 +1,17 @@
+server:
+  port: 80
+  servlet:
+    session:
+      tracking-modes: cookie
+      cookie:
+        http-only: true
+
+spring:            #全局配置
+  thymeleaf:
+    cache: false
+  profiles:
+    active: dev
+  web:
+    resources:
+      static-locations: classpath:static/
+

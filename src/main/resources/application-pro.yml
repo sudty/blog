@@ -1,0 +1,35 @@
+spring:
+  redis:
+    port: 6379
+    host: 43.138.227.20
+    database: 0
+    password: 223770chbo@
+    lettuce:
+      pool:
+        enabled: true
+        max-active: 8
+        min-idle: 0
+        max-idle: 8
+        max-wait: 1000
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: sufty
+    password: 223770chbo@qq.com
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://43.138.227.20:3306/blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+
+pagehelper:                #分页插件
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
+
+mybatis:
+  type-aliases-package: com.blog.pojo   #设置别名
+  mapper-locations: classpath*:mapper/*.xml   #ָ指定myBatis的核心配置文件与Mapper映射文件
